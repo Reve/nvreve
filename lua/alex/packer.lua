@@ -13,13 +13,10 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({ 
-	  'rose-pine/neovim', 
-	  as = 'rose-pine',
-	  config = function() 
-		  vim.cmd('colorscheme rose-pine')
+  use 'ThePrimeagen/harpoon'
 
-	  end
+  use({ 'rose-pine/neovim', as = 'rose-pine',
+	  config = function() vim.cmd('colorscheme rose-pine') end
   })
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -31,7 +28,7 @@ return require('packer').startup(function(use)
 	  branch = 'v2.x',
 	  requires = {
 		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},             -- Required
+		  {'neovim/nvim-lspconfig'},
 		  {                                      -- Optional
 		  'williamboman/mason.nvim',
 		  run = function()
@@ -47,12 +44,14 @@ return require('packer').startup(function(use)
   }
 
   use { 'https://codeberg.org/esensar/nvim-dev-container' }
+
+  use 'APZelos/blamer.nvim'
+
+  -- Prettier
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
-  use('ThePrimeagen/harpoon')
+  use('averms/black-nvim')
   use('semanticart/tag-peek.vim')
   use('jamestthompson3/nvim-remote-containers')
-  use('f-person/git-blame.nvim')
-
 end)

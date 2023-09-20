@@ -7,6 +7,11 @@ end)
 
 require('telescope').setup{
     defaults = {
-        file_ignore_patterns  = { 'node_modules', '.git' },
+        file_ignore_patterns = {
+            "node_modules",
+            "__pycache__",
+            ".git",
+            "webpack_bundles",
+        }
     }
 }
