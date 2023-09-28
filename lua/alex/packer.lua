@@ -13,10 +13,13 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use 'ThePrimeagen/harpoon'
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
 
-  use({ 'rose-pine/neovim', as = 'rose-pine',
-	  config = function() vim.cmd('colorscheme rose-pine') end
+	  end
   })
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -51,7 +54,9 @@ return require('packer').startup(function(use)
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
-  use('averms/black-nvim')
+  use('ThePrimeagen/harpoon')
   use('semanticart/tag-peek.vim')
-  use('jamestthompson3/nvim-remote-containers')
+  use('averms/black-nvim')
+  use('lewis6991/gitsigns.nvim')
+
 end)
