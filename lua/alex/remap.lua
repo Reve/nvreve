@@ -35,3 +35,8 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
 )
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 vim.keymap.set("n", "<leader>x", function() vim.cmd("Trouble") end)
+
+vim.keymap.set("n", "<C-h>", function() vim.cmd("wincmd h") end)
+vim.keymap.set("n", "<C-j>", function() vim.cmd("wincmd j") end)
+vim.keymap.set("n", "<C-k>", function() vim.cmd("wincmd k") end)
+vim.keymap.set("n", "<C-l>", function() vim.cmd("wincmd l") end)
