@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", function() vim.cmd("Ex") end)
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
-vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.keymap.set("n", "<leader>q", function() vim.lsp.buf.hover()  end)
 vim.keymap.set("n", "<leader>f", function() vim.cmd("Prettier") end)
 vim.keymap.set("n", "<leader>a", function () require("harpoon.mark").add_file() end)
