@@ -63,5 +63,5 @@ return {
   },
 
   'preservim/vim-pencil',
-  'junegunn/goyo.vim',
+  'github/copilot.vim',
 }
