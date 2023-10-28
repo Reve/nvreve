@@ -18,5 +18,7 @@ prettier.setup({
   },
   cli_options = {
       config_precedence = "prefer-file",
+      semi = true,
+      single_quote = true,
   }
 })
