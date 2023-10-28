@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>a", function () require("harpoon.mark").add_file() 
 vim.keymap.set("n", "<leader>h", function () require("harpoon.ui").toggle_quick_menu() end)
 vim.keymap.set("n", "<C-.>", function () require("harpoon.ui").nav_next() end)
 vim.keymap.set("n", "<C-,>", function () require("harpoon.ui").nav_prev() end)
-vim.keymap.set("n", "<leader>pt", function () require("harpoon.term").gotoTerminal(1) end)
+-- vim.keymap.set("n", "<leader>pt", function () require("harpoon.term").gotoTerminal(1) end)
 
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 vim.api.nvim_set_keymap('n', '<leader>d[', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
@@ -40,3 +40,7 @@ vim.keymap.set("n", "<C-h>", function() vim.cmd("wincmd h") end)
 vim.keymap.set("n", "<C-j>", function() vim.cmd("wincmd j") end)
 vim.keymap.set("n", "<C-k>", function() vim.cmd("wincmd k") end)
 vim.keymap.set("n", "<C-l>", function() vim.cmd("wincmd l") end)
+
+-- Floating terminal FTerm
+vim.keymap.set('n', '<leader>pt', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

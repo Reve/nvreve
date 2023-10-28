@@ -64,4 +64,5 @@ return {
 
   'preservim/vim-pencil',
   'github/copilot.vim',
+  'numToStr/FTerm.nvim',
 }
