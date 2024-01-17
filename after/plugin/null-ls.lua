@@ -5,5 +5,8 @@ null_ls.setup({
         null_ls.builtins.formatting.black.with({
             extra_args = { "--line-length", "119" },
         }),
+        null_ls.builtins.formatting.isort.with({
+            extra_args = { "--line-length", "119" },
+        }),
     }
 })
