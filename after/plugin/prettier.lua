@@ -20,5 +20,6 @@ prettier.setup({
       config_precedence = "prefer-file",
       semi = true,
       single_quote = true,
+      tab_width = 4,
   }
 })

@@ -14,15 +14,15 @@ return {
   },
 
   {
-      'nvim-treesitter/nvim-treesitter',  
-      build = ':TSUpdate' 
+      'nvim-treesitter/nvim-treesitter',
+      build = ':TSUpdate'
   },
 
   ('mbbill/undotree'),
 
   {
 	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v2.x',
+	  branch = 'v3.x',
 	  dependencies = {
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
@@ -40,22 +40,17 @@ return {
 	  }
   },
 
-  { 'https://codeberg.org/esensar/nvim-dev-container' },
-
   'APZelos/blamer.nvim',
 
   -- Prettier
-  ('neovim/nvim-lspconfig'),
   ('jose-elias-alvarez/null-ls.nvim'),
   ('MunifTanjim/prettier.nvim'),
   ('ThePrimeagen/harpoon'),
   ('semanticart/tag-peek.vim'),
   ('averms/black-nvim'),
   ('lewis6991/gitsigns.nvim'),
-  ('jamestthompson3/nvim-remote-containers'),
   ('f-person/git-blame.nvim'),
   ('folke/trouble.nvim'),
-  ('nvim-tree/nvim-web-devicons'),
 
   {
       'nvim-lualine/lualine.nvim',
@@ -67,4 +62,7 @@ return {
   'numToStr/FTerm.nvim',
   'stsewd/isort.nvim',
   'Djancyp/cheat-sheet',
+--  'mattn/emmet-vim',
+  'Shopify/tree-sitter-liquid',
+  'marene/nvm.vim',
 }
