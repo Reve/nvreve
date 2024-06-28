@@ -15,15 +15,17 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+--[[ 
 lsp_zero.format_on_save({
     format_opts = {
         async = true,
         timeout_ms = 10000,
     },
     servers = {
-        ["null-ls"] = {'lua', 'rust', 'python', 'go', 'html', 'json'},
+       ["null-ls"] = {'lua', 'rust', 'python', 'go', 'html', 'json'},
     }
 })
+--]]
 
 require('mason').setup({})
 require('mason-lspconfig').setup({

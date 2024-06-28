@@ -6,6 +6,7 @@ prettier.setup({
     "css",
     "graphql",
     "html",
+    "htmldjango",
     "javascript",
     "javascriptreact",
     "json",

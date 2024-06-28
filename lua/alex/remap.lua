@@ -4,7 +4,6 @@ vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.keymap.set("n", "<leader>q", function() vim.lsp.buf.hover()  end)
-vim.keymap.set("n", "<leader>f", function() vim.cmd("Prettier") end)
 vim.keymap.set("n", "<leader>a", function () require("harpoon.mark").add_file() end)
 vim.keymap.set("n", "<leader>h", function () require("harpoon.ui").toggle_quick_menu() end)
 vim.keymap.set("n", "<C-.>", function () require("harpoon.ui").nav_next() end)
