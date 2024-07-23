@@ -9,8 +9,8 @@ function FormatCode()
         })
     elseif filetype == "javascript" or filetype == "typescript" then
         vim.lsp.buf.format({
-            filter = function(client) return client.name == "prettier" and
-                client.server_capabilities.documentFormattingProvider end,
+            -- filter = function(client) return client.name == "null-ls" and
+              --  client.server_capabilities.documentFormattingProvider end,
             timeout_ms = 1000,
         })
     else
