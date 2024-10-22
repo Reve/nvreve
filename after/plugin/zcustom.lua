@@ -3,16 +3,15 @@ function FormatCode()
 
     if filetype == "python" then
         vim.lsp.buf.format({
-            filter = function(client) return client.name == "null-ls" and
-                client.server_capabilities.documentFormattingProvider end,
+            filter = function(client)
+                return client.name == "null-ls" and
+                    client.server_capabilities.documentFormattingProvider
+            end,
             timeout_ms = 1000,
         })
-    elseif filetype == "javascript" or filetype == "typescript" then
-        vim.lsp.buf.format({
-            -- filter = function(client) return client.name == "null-ls" and
-              --  client.server_capabilities.documentFormattingProvider end,
-            timeout_ms = 1000,
-        })
+    elseif filetype == "javascript" or filetype == "javascriptreact" or filetype == "typescript" or filetype == "typescriptreact" then
+        vim.cmd("EslintFixAll")
+        vim.cmd("Prettier")
     else
         -- Add more filetypes and formatters as needed
         vim.lsp.buf.format({

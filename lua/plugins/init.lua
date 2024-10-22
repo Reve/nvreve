@@ -74,4 +74,5 @@ return {
         }
     },
     'Djancyp/better-comments.nvim',
+    { 'akinsho/toggleterm.nvim', version = "*" }
 }
