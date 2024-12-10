@@ -25,7 +25,8 @@ telescope.setup{
                 "!.git",
                 "--hidden",
             },
-            previewer = false,
+            sorting_strategy = "ascending",
+            previewer = true,
         },
         git_files = {
             theme = "dropdown",
