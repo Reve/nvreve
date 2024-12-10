@@ -9,8 +9,10 @@ function FormatCode()
             end,
             timeout_ms = 1000,
         })
-    elseif filetype == "javascript" or filetype == "javascriptreact" or filetype == "typescript" or filetype == "typescriptreact" then
+    elseif filetype == "javascript" or filetype == "javascriptreact" then
         vim.cmd("EslintFixAll")
+        vim.cmd("Prettier")
+    elseif filetype == "typescript" or filetype == "typescriptreact" then
         vim.cmd("Prettier")
     else
         -- Add more filetypes and formatters as needed
