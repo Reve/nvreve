@@ -73,5 +73,9 @@ return {
         }
     },
     'Djancyp/better-comments.nvim',
-    { 'akinsho/toggleterm.nvim', version = "*" }
+    { 'akinsho/toggleterm.nvim', version = "*" },
+    'nvim-tree/nvim-web-devicons',
+    "SmiteshP/nvim-navic",
+    'mfussenegger/nvim-dap',
+    'mfussenegger/nvim-dap-python'
 }
