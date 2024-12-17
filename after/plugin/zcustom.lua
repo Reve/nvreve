@@ -13,9 +13,10 @@ function FormatCode()
         vim.cmd("EslintFixAll")
         vim.cmd("Prettier")
     elseif filetype == "typescript" or filetype == "typescriptreact" then
+        vim.cmd("EslintFixAll")
         vim.cmd("Prettier")
     elseif filetype == "go" then
-       require('go.format').goimports()
+        require('go.format').goimports()
     else
         -- Add more filetypes and formatters as needed
         vim.lsp.buf.format({
